@@ -15,16 +15,16 @@
     "pages/setting_egg/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#242424",
+    "navigationBarBackgroundColor": "#B84A39",
     "navigationBarTitleText": "婚礼邀请函",
     "navigationBarTextStyle": "white",
     "navigationStyle": "custom",
-    "backgroundColor": "#242424"
+    "backgroundColor": "#B84A39"
   },
   "tabBar": {
     "color": "#fff",
     "selectedColor": "#eccb90",
-    "backgroundColor": "#242424",
+    "backgroundColor": "#B84A39",
     "list": [
       {
         "text": "邀请函",

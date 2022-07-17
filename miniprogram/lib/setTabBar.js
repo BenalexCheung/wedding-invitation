@@ -18,9 +18,9 @@ const map = [
 ]
 const color = {
   'black-gold': {
-    color: '#fff',
-    selectedColor: '#eccb90',
-    backgroundColor: '#242424'
+    color: '#B84A39',
+    selectedColor: '#6F3826',
+    backgroundColor: '#F15C5C'
   }
 }
 function setTabBar(style) {

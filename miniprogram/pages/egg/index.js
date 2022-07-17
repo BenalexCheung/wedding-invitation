@@ -27,7 +27,7 @@ page({
     tempFilePath: '',
 
     // 是否拒绝保存到相册
-    isRefuse: false
+    isRefuse: true
   },
   onLoad() {
     const { userInfo } = app.globalData
