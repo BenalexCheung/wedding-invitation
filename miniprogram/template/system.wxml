@@ -4,3 +4,4 @@
 <ui-loading wx:if="{{!$ready || !$pageReady}}"/>
 
 <ui-music />
+<ui-video />

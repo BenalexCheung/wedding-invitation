@@ -3,6 +3,7 @@
     "ui-tap-shape": "/components/tap-shape/index",
     "ui-background": "/components/background/index",
     "ui-loading": "/components/loading/index",
-    "ui-music": "/components/music/index"
+    "ui-music": "/components/music/index",
+    "ui-video": "/components/video/index"
   }
 }

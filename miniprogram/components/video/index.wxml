@@ -1,0 +1,26 @@
+<view class="video-box" bindtap="buttonTap">
+  <image src="/images/video-player1.png" class="video-icon"></image>
+</view>
+
+<view class='modal-mask' hidden='{{!show}}'>
+  <view class='modal-content'>
+    <scroll-view scroll-y class='main-content'>
+      <video 
+      id="myVideo" 
+      src="cloud://mp-cloudbase-9gh8wipq383e7c47.6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117/video/25388887-1-16.mp4" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+    ></video>
+      <slot></slot>
+    </scroll-view>
+    <view class='modal-footer'>
+      <view wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</view>
+      <view class='confirm-btn' bindtap='confirm'>再逛逛</view>
+    </view>
+  </view>
+</view>
