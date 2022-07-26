@@ -7,7 +7,7 @@
     <scroll-view scroll-y class='main-content'>
       <video 
       id="myVideo" 
-      src="cloud://mp-cloudbase-9gh8wipq383e7c47.6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117/video/25388887-1-16.mp4" 
+      src="cloud://mp-cloudbase-9gh8wipq383e7c47.6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117/video/42fdf254f5f8c3fd4d42288ce60045ee.mp4"
       binderror="videoErrorCallback" 
       danmu-list="{{danmuList}}" 
       enable-danmu 
