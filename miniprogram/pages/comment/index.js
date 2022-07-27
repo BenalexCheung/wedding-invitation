@@ -2,6 +2,7 @@ const page = require('../../framework/page.js')
 const comment = require('../../services/comment.js')
 const attend = require('../../services/attend.js')
 const app = getApp()
+const Event = require('../../lib/event.js')
 
 function createGetUserInfo(msg, showLayer) {
   return ({ detail: { userInfo } }) => {}
@@ -72,6 +73,9 @@ page({
         this.setData({
           list: list.concat(res),
           pageNum
+        })
+        Event.emit('danmuChange', {
+          danmuList: this.data.list // 全量发送
         })
       }
     })

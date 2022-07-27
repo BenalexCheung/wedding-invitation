@@ -32,23 +32,37 @@ Component({
    * 页面的初始数据
    */
   data: {
-    danmuList:
-    [{
-      text: '第 1s 出现的弹幕',
-      color: '#ff0000',
-      time: 1
-    }, {
-      text: '第 3s 出现的弹幕',
-      color: '#ff00ff',
-      time: 3
-    }],
+    danmuList: [],
   },
 
   attached: function () {
+    console.log("attached")
     this.setData({
       show: false
     })
-    this.videoContext = wx.createVideoContext('myVideo',this)
+    this.videoContext = wx.createVideoContext('myVideo', this)
+  },
+
+  ready: function () {
+    console.log("ready")
+    Event.on('danmuChange', data => {
+      console.log("danmuChange")
+      let newDanmuList = Object.assign([], data.danmuList)
+      let dmList = []
+      for (let i = 0; i < newDanmuList.length; i++) {
+        let timesTamp = Date.parse(newDanmuList[i].time);
+        let danmuTime = timesTamp / 1000 % 136; // 136：视频时长
+        dmList.push({
+          text: newDanmuList[i].comment,
+          color: getRandomColor(),
+          time: danmuTime
+        })
+      }
+      this.setData({
+        danmuList: dmList
+      })
+      // console.log(this.data.danmuList)
+    })
   },
 
   methods: {
