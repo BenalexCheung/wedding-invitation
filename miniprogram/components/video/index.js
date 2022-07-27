@@ -2,13 +2,9 @@ const app = getApp()
 const Event = require('../../lib/event.js')
 
 function getRandomColor() {
-  const rgb = []
-  for (let i = 0; i < 3; ++i) {
-    let color = Math.floor(Math.random() * 256).toString(16)
-    color = color.length === 1 ? '0' + color : color
-    rgb.push(color)
-  }
-  return '#' + rgb.join('')
+  const rgb = ["FF69B4 ","FF1493 ","C71585 ","DA70D6 ","D8BFD8 ","DDA0DD ","FF00FF ","FFD700 ","E6E6FA ","FFFACD "]
+  let colorIdx = Math.floor(Math.random() * 10)
+  return '#' + rgb[colorIdx]
 }
 
 Component({
