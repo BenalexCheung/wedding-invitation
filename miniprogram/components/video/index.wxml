@@ -5,11 +5,12 @@
 <view class='modal-mask' hidden='{{!show}}' bindtap='clickMask'>
   <view class='modal-content' catchtap="emptyFunction">
     <scroll-view scroll-y class='main-content'>
-      <title class="text-title">We promise each other ⌈与子成说⌋</title>
-      <view class="text-label">
+      <view class="text-title">We promise each other</view>
+      <view class="text-title">⌈与子成说⌋</view>
+      <!-- <view class="text-label">
         <view>直到遇见你的那一刻</view>
         <view>我发现，我的感情有了完美的归宿</view>
-      </view>
+      </view> -->
 
       <video id="myVideo" src="cloud://mp-cloudbase-9gh8wipq383e7c47.6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117/video/42fdf254f5f8c3fd4d42288ce60045ee.mp4" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
       <slot></slot>
@@ -18,11 +19,11 @@
         <view>这是一份婚礼邀请函 </view>
         <view>更是一则</view>
         <view>想讲给你听的，我们的</view>
-        <view>爱情</view>
+        <view>爱情故事</view>
       </view>
 
       <view bindtap='clickAudio'>
-            <audio poster="https://p1.music.126.net/yaNE5CAjwedsW2I3VwZEmQ==/109951165267091688.jpg?param=130y130" name="上弦与月" author="benalex" src="http://music.163.com/song/media/outer/url?id=1473772177.mp3" id="myAudio" controls loop></audio>
+        <audio poster="https://p1.music.126.net/yaNE5CAjwedsW2I3VwZEmQ==/109951165267091688.jpg?param=130y130" name="上弦与月" author="benalex" src="https://6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117.tcb.qcloud.la/music/267091688.mp3?sign=81fadfebd45ff3d59a3efb7ec3ad2204&t=1658936526" id="myAudio" controls loop></audio>
       </view>
     </scroll-view>
     <!-- <view class='modal-footer'>

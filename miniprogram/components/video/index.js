@@ -33,32 +33,31 @@ Component({
   },
 
   attached: function () {
-    console.log("attached")
+    console.log("attached");
     this.setData({
       show: false
-    })
-    this.videoContext = wx.createVideoContext('myVideo', this)
-    this.audioCtx = wx.createAudioContext('myAudio', this)
+    });
+    this.videoContext = wx.createVideoContext('myVideo', this);
+    this.audioCtx = wx.createAudioContext('myAudio', this);
   },
 
   ready: function () {
-    console.log("ready")
+    console.log("ready");
     Event.on('danmuChange', data => {
-      console.log("danmuChange")
-      let newDanmuList = Object.assign([], data.danmuList)
-      let dmList = []
+      console.log("danmuChange");
+      let newDanmuList = Object.assign([], data.danmuList);
+      let dmList = [];
       for (let i = 0; i < newDanmuList.length; i++) {
-        let timesTamp = Date.parse(newDanmuList[i].time);
-        let danmuTime = timesTamp / 1000 % 136; // 136：视频时长
+        let danmuTime = Math.floor(Math.random() * 136); // 136：视频时长
         dmList.push({
           text: newDanmuList[i].comment,
           color: getRandomColor(),
           time: danmuTime
-        })
+        });
       }
       this.setData({
         danmuList: dmList
-      })
+      });
       // console.log(this.data.danmuList)
     })
   },
