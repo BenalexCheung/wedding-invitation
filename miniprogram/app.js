@@ -37,6 +37,7 @@ App({
     const audio = wx.createInnerAudioContext()
     audio.autoplay = true
     audio.loop = true
+    audio.obeyMuteSwitch = false
     this.globalData.audio = audio
 
     // 全局状态改变

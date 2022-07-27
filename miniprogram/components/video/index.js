@@ -2,7 +2,7 @@ const app = getApp()
 const Event = require('../../lib/event.js')
 
 function getRandomColor() {
-  const rgb = ["FF69B4 ","FF1493 ","C71585 ","DA70D6 ","D8BFD8 ","DDA0DD ","FF00FF ","FFD700 ","E6E6FA ","FFFACD "]
+  const rgb = ["FF69B4 ", "FF1493 ", "C71585 ", "DA70D6 ", "D8BFD8 ", "DDA0DD ", "FF00FF ", "FFD700 ", "E6E6FA ", "FFFACD "]
   let colorIdx = Math.floor(Math.random() * 10)
   return '#' + rgb[colorIdx]
 }
@@ -28,6 +28,7 @@ Component({
    * 页面的初始数据
    */
   data: {
+    isAudioPlay: false,
     danmuList: [],
   },
 
@@ -37,6 +38,7 @@ Component({
       show: false
     })
     this.videoContext = wx.createVideoContext('myVideo', this)
+    this.audioCtx = wx.createAudioContext('myAudio', this)
   },
 
   ready: function () {
@@ -74,8 +76,40 @@ Component({
         show: true
       })
 
-      this.videoContext.play()
+      // this.videoContext.play()
     },
+
+    /**
+     * 关闭弹窗
+     */
+    clickMask() {
+      this.setData({
+        show: false
+      })
+      Event.emit('stateChange', {
+        isMusicPlay: true
+      })
+      this.videoContext.pause()
+      this.audioCtx.pause()
+      this.audioCtx.seek(0)
+    },
+
+    /**
+     * 播放音乐
+     */
+    clickAudio() {
+      this.setData({
+        isAudioPlay: !this.data.isAudioPlay
+      })
+      if (this.data.isAudioPlay) {
+        this.audioCtx.play()
+      } else {
+        this.audioCtx.pause()
+      }
+    },
+
+    // 点击取消按钮的回调函数
+    emptyFunction() {},
 
     // 点击取消按钮的回调函数
     cancel() {
