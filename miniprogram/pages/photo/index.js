@@ -100,7 +100,8 @@ page({
     const { $photos } = this.data
     wx.previewImage({
       urls: $photos.map(item => item.url),
-      current: $photos[index].url
+      current: $photos[index].url,
+      showmenu: false
     })
   },
   getUserInfo() {

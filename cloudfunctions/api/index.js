@@ -1,6 +1,6 @@
 const cloud = require('wx-server-sdk')
 cloud.init({
-  env: 'mp-cloudbase-9gh8wipq383e7c47',
+  env: 'wedding-invitation-2dy9h98457c4f',
   traceUser: true
 })
 

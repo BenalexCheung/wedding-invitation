@@ -12,7 +12,7 @@
         <view>我发现，我的感情有了完美的归宿</view>
       </view> -->
 
-      <video id="myVideo" src="cloud://mp-cloudbase-9gh8wipq383e7c47.6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117/video/42fdf254f5f8c3fd4d42288ce60045ee.mp4" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
+      <video id="myVideo" src="cloud://wedding-invitation-2dy9h98457c4f.7765-wedding-invitation-2dy9h98457c4f-1255549117/video/42fdf254f5f8c3fd4d42288ce60045ee.mp4" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
       <slot></slot>
 
       <view class="text-label">
@@ -23,7 +23,7 @@
       </view>
 
       <view bindtap='clickAudio'>
-        <audio poster="https://p1.music.126.net/yaNE5CAjwedsW2I3VwZEmQ==/109951165267091688.jpg?param=130y130" name="上弦与月" author="benalex" src="https://6d70-mp-cloudbase-9gh8wipq383e7c47-1255549117.tcb.qcloud.la/music/267091688.mp3?sign=81fadfebd45ff3d59a3efb7ec3ad2204&t=1658936526" id="myAudio" controls loop></audio>
+        <audio poster="https://p1.music.126.net/yaNE5CAjwedsW2I3VwZEmQ==/109951165267091688.jpg?param=130y130" name="上弦与月" author="benalex" src="https://7765-wedding-invitation-2dy9h98457c4f-1255549117.tcb.qcloud.la/music/267091688.mp3?sign=f432b37d0f714b117849da8643e8d5c5&t=1686323045" id="myAudio" controls loop></audio>
       </view>
     </scroll-view>
     <!-- <view class='modal-footer'>
